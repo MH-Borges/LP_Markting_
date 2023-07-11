@@ -53,11 +53,12 @@ body header nav .logo svg {
 }
 body header nav .seta {
   position: relative;
-  padding: 0.5vh 1.75vw 0.5vh 0.5vw;
+  padding: 0.5vh 2vw 0.5vh 0.5vw;
 }
 body header nav .seta svg {
   position: absolute;
   height: 100%;
+  width: 1vw;
   top: 0;
   right: 5%;
 }
