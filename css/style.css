@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box !important;
+  list-style: none;
+  text-decoration: none !important;
+}
+
+body {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Montserrat", sans-serif;
+  background-color: #FFFFFF;
+  overflow-x: hidden;
+}
+body header {
+  top: 0;
+  position: fixed;
+  height: 12vh;
+  width: 100%;
+  z-index: 99;
+  padding: 1vh 0;
+  background-color: #004CDC;
+  display: flex;
+  justify-content: center;
+}
+body header nav {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+body header nav a {
+  color: #FFFFFF;
+  font-size: 0.85vw;
+  font-weight: 300;
+  padding: 0.5vh 0.5vw;
+  margin: 0 0.5vw;
+}
+body header nav a:nth-child(2) {
+  margin-left: auto;
+}
+body header nav .logo {
+  margin: 0;
+  padding: 0;
+  width: 17vw;
+  height: 100%;
+}
+body header nav .logo svg {
+  width: 100%;
+  height: 100%;
+}
+body header nav .seta {
+  position: relative;
+  padding: 0.5vh 1.75vw 0.5vh 0.5vw;
+}
+body header nav .seta svg {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  right: 5%;
+}
+body main {
+  margin: auto;
+  width: 70%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+body main .Banner {
+  margin-top: 12vh;
+  width: 100%;
+  height: 88vh;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+body main .Banner .Background {
+  z-index: 2;
+  left: -22%;
+  width: 150%;
+  height: 79%;
+  position: absolute;
+}
+body main .Banner .Chamada {
+  position: relative;
+  z-index: 5;
+  width: 50%;
+  height: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+}
+body main .Banner .Chamada h1 {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #FFFFFF;
+  font-size: 1.5vw;
+  position: relative;
+  padding: 1vh 6vw 1vh 12vw;
+  letter-spacing: 0.1vw;
+}
+body main .Banner .Chamada h1 b {
+  bottom: 100%;
+  left: 0;
+  font-weight: 800;
+  position: absolute;
+  font-size: 2vw;
+  height: 3vh;
+}
+body main .Banner .Chamada h1 span {
+  font-weight: 700;
+  color: #F7BC44;
+}
+body main .Banner .Chamada h1 span:nth-child(2) {
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: absolute;
+  font-weight: 900;
+  font-size: 7vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main .Banner .Chamada h2 {
+  margin-top: 2vh;
+  color: #FFFFFF;
+  font-weight: 300;
+  font-size: 1vw;
+  padding: 1vh 10vw 1vh 0;
+  line-height: 2.5vh;
+}
+body main .Banner .Imagem {
+  position: relative;
+  z-index: 5;
+  width: 50%;
+  height: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1vw;
+}
+body main .Banner .Imagem .folha {
+  width: 25%;
+  height: 100%;
+}
+body main .Banner .Imagem .folha:nth-child(3) {
+  transform: scaleX(-1);
+}
+body main .Banner .Imagem img {
+  width: 50%;
+  padding: 0.5vw;
+}
+body main .Banner .Imagem img, body main .Banner .Imagem svg {
+  margin-top: -4vh;
+}
+body main .Banner .texto {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: 40%;
+  text-align: left;
+  font-size: 1.25vw;
+  padding: 6vh 7vw;
+  color: #1A2E3C;
+  font-weight: 400;
+  line-height: 3.5vh;
+}
+body main .Banner .texto::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 93%;
+  background-color: #EFF4F8;
+  border-radius: 1.5vw;
+}
+body main .Banner .texto svg {
+  position: absolute;
+  border: solid 3px #FFFFFF;
+  background-color: #EFF4F8;
+  top: -7.5%;
+  left: 48%;
+  width: 2.5vw;
+  height: 2.5vw;
+  border-radius: 50%;
+  padding: 0.25vw;
+}
+body footer {
+  width: 100%;
+  height: 11vh;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5vh 0 1.5vh;
+}
+body footer a {
+  width: auto;
+  height: 100%;
+}
+body footer a img {
+  height: 90%;
+  width: auto;
+}
+body footer p {
+  font-size: 0.75vw;
+  padding: 0.5vh 0;
+}/*# sourceMappingURL=style.css.map */
