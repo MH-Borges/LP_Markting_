@@ -11,6 +11,10 @@ $Main-font:'Montserrat', sans-serif;
     text-decoration: none !important;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body {
     width: 100vw;
     display: flex;
@@ -208,7 +212,6 @@ body {
             flex-direction: column;
             align-items: center;
             iframe{
-                width: 85%;
                 height: 65vh;
                 border-radius: 2vw;
                 background-color: $AzulEscuro;
@@ -219,6 +222,7 @@ body {
                 padding: 3vh 5vw;
                 color: $AzulTexto;
                 font-weight: 800;
+                font-size: 2vw;
             }
             .CardsBlock{
                 width: 100%;
@@ -360,7 +364,6 @@ body {
                 justify-content: center;
                 padding:  0 0 0 5vw;
                 iframe{
-                    width: 100%;
                     height: 31vh;
                     border-radius: 1vw;
                     background-color: $AzulEscuro;
@@ -382,10 +385,11 @@ body {
             width: 100%;
             height: 100vh;
             position: relative;
-            border: solid blue 1px;
             padding: 7.5vh 0;
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             &::before{
                 background-color: $Cinza;
                 content: '';
@@ -397,9 +401,123 @@ body {
                 top: 0;
             }
             h2{
-                border: solid red 1px;
                 width: 100%;
+                height: 8vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $AzulTexto;
+                font-weight: 900;
+                font-size: 2vw;
             }
+            .NumBlock{
+                width: 100%;
+                height: 12vh;
+                margin-bottom: 7vh;
+                display: flex;
+                justify-content: space-around;
+                .Numeros{
+                    width: 20%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    &:nth-child(1){
+                        margin-right: -4.5vw;
+                    }
+                    &:nth-child(2), &:nth-child(3){
+                        margin: 0 -4.5vw;
+                    }
+                    &:nth-child(4){
+                        margin-left: -4.5vw;
+                    }
+                    .Num{
+                        display: flex;
+                        justify-content: center;
+                        width: 100%;
+                        span{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 20%;
+                            color: $AzulTexto;
+                            font-size: 3vw;
+                            font-weight: 900;
+                        }
+                        h4{
+                            display: flex;
+                            align-items: center;
+                            width: 50%;
+                            text-align: left;
+                            color: $AzulTexto;
+                            font-size: 2.5vw;
+                            font-weight: 900;
+                        }
+                    }
+                    p{
+                        font-size: 1vw;
+                        text-align: center;
+                        margin-left: -1vw;
+                    }
+                }
+            }
+            .CardsBlock{
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                width: 100%;
+                height: 50vh;
+                padding: 3vh 0;
+                align-items: center;
+                justify-content: space-between;
+                .card{
+                    width: 32%;
+                    height: 80%;
+                    padding: 1vh 2vw;
+                    background-color: $Branco;
+                    border-radius: 1vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    .img{
+                        width: 100%;
+                        height: 35%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    h4{
+                        height: 15%;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 0.9vw;
+                        color: $AzulTexto;
+                    }
+                    p{
+                        height: 50%;
+                        width: 100%;
+                        text-align: center;
+                        display: flex;
+                        align-items: start;
+                        justify-content: center;
+                        font-size: 0.65vw;
+                        font-weight: 400;
+                        line-height: 1.6vh;
+                    }
+                }
+                .mais{
+                    bottom: 3.5vh;
+                    position: absolute;
+                    width: 100%;
+                    font-size: 0.9vw;
+                    text-align: center;
+                }
+            }
+            
         }
         .SEO{
             width: 100%;
