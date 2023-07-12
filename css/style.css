@@ -11,6 +11,16 @@ html {
   scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+  width: 1vw;
+  background: #EFF4F8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00B3E5;
+  border-radius: 5vw;
+}
+
 body {
   width: 100vw;
   display: flex;
@@ -504,7 +514,7 @@ body main .Numeros_Clientes .CardsBlock .card p {
   display: flex;
   align-items: start;
   justify-content: center;
-  font-size: 0.65vw;
+  font-size: 0.68vw;
   font-weight: 400;
   line-height: 1.6vh;
 }
@@ -519,9 +529,169 @@ body main .SEO {
   width: 100%;
   height: 150vh;
   position: relative;
-  border: solid rgb(0, 247, 255) 1px;
+  display: flex;
+  flex-direction: column;
+}
+body main .SEO .BlockInicial {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main .SEO .BlockInicial .infos {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body main .SEO .BlockInicial .infos h2 {
+  width: 100%;
+  height: 11.5vh;
+  color: #153AD1;
+  font-weight: 900;
+  font-size: 2vw;
+  padding: 1vh 15vw 1vh 0;
+}
+body main .SEO .BlockInicial .infos h3 {
+  width: 100%;
+  height: 8vh;
+  color: #1A2E3C;
+  font-weight: 400;
+  font-size: 1vw;
+  line-height: 2.25vh;
+  padding: 1vh 11vw 0 0;
+}
+body main .SEO .BlockInicial .infos .CardsBlock {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+body main .SEO .BlockInicial .infos .CardsBlock .card {
+  width: 48%;
+  height: 9vh;
+  background-color: #EFF4F8;
+  border-radius: 0.75vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main .SEO .BlockInicial .infos .CardsBlock .card:nth-child(1), body main .SEO .BlockInicial .infos .CardsBlock .card:nth-child(2) {
+  margin-top: 4vh;
+}
+body main .SEO .BlockInicial .infos .CardsBlock .card:nth-child(3), body main .SEO .BlockInicial .infos .CardsBlock .card:nth-child(4) {
+  margin: -4vh 0;
+}
+body main .SEO .BlockInicial .infos .CardsBlock .card svg, body main .SEO .BlockInicial .infos .CardsBlock .card img {
+  padding: 2.25vh 0;
+  width: 35%;
+  height: 100%;
+}
+body main .SEO .BlockInicial .infos .CardsBlock .card p {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-weight: 400;
+  font-size: 1.1vw;
+  color: #1A2E3C;
+}
+body main .SEO .BlockInicial .Imagem {
+  width: 50%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 15vh 0 15vh 7vw;
+}
+body main .SEO .BlockInicial .Imagem img {
+  width: auto;
+  height: 100%;
+}
+body main .SEO .BlockFinal {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main .SEO .BlockFinal .Imagem {
+  width: 50%;
+  height: 100%;
+  position: relative;
+}
+body main .SEO .BlockFinal .Imagem img {
+  position: absolute;
+  width: auto;
+  height: 100%;
+  bottom: 0;
+}
+body main .SEO .BlockFinal .Imagem img:nth-child(1) {
+  left: 0;
+  height: 95%;
+}
+body main .SEO .BlockFinal .Imagem img:nth-child(2) {
+  height: 120%;
+  right: 12%;
+}
+body main .SEO .BlockFinal .infos {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body main .SEO .BlockFinal .infos h2 {
+  width: 100%;
+  height: 10vh;
+  font-size: 2vw;
+  color: #153AD1;
+  font-weight: 900;
+  padding-right: 5vw;
+  display: flex;
+  align-items: center;
+}
+body main .SEO .BlockFinal .infos .CardsBlock {
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+body main .SEO .BlockFinal .infos .CardsBlock .card {
+  background-color: #004CDC;
+  border-radius: 0.75vw;
+  width: 48%;
+  height: 9vh;
+  display: flex;
+}
+body main .SEO .BlockFinal .infos .CardsBlock .card:nth-child(3), body main .SEO .BlockFinal .infos .CardsBlock .card:nth-child(4) {
+  margin-top: -6vh;
+}
+body main .SEO .BlockFinal .infos .CardsBlock .card svg, body main .SEO .BlockFinal .infos .CardsBlock .card img {
+  padding: 2.25vh 0;
+  width: 35%;
+  height: 100%;
+}
+body main .SEO .BlockFinal .infos .CardsBlock .card p {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-weight: 400;
+  font-size: 1vw;
+  color: #FFFFFF;
+  padding-right: 1vw;
 }
 body main .Dashboards {
+  z-index: 999;
   width: 100%;
   height: 100vh;
   position: relative;
