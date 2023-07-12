@@ -197,27 +197,143 @@ body main .Banner .texto svg {
   padding: 0.25vw;
 }
 body main .Destaques {
-  padding: 3vh 0;
+  padding: 5vh 0 3vh;
   width: 100%;
   height: 150vh;
   position: relative;
-  border: solid red 1px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  z-index: 999;
 }
 body main .Destaques iframe {
-  width: 95%;
+  width: 85%;
   height: 65vh;
   border-radius: 2vw;
   background-color: #004CDC;
+}
+body main .Destaques h2 {
+  height: 15vh;
+  text-align: center;
+  padding: 3vh 5vw;
+  color: #153AD1;
+  font-weight: 800;
+}
+body main .Destaques .CardsBlock {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+body main .Destaques .CardsBlock .card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EFF4F8;
+  border-radius: 1vw;
+  width: 31.5%;
+  height: 13vh;
+}
+body main .Destaques .CardsBlock .card:nth-child(4), body main .Destaques .CardsBlock .card:nth-child(5) {
+  margin-top: -7vh;
+}
+body main .Destaques .CardsBlock .card:nth-child(4) {
+  margin-right: -11vw;
+}
+body main .Destaques .CardsBlock .card h4 {
+  height: 100%;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2vw;
+  color: #153AD1;
+  font-weight: 900;
+}
+body main .Destaques .CardsBlock .card p {
+  height: 100%;
+  width: 75%;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 1vw;
+  font-weight: 400;
+}
+body main .Destaques .texto {
+  position: relative;
+  z-index: 5;
+  width: 100%;
+  height: 30vh;
+  text-align: left;
+  font-size: 1.25vw;
+  padding: 6vh 8vw;
+  color: #1A2E3C;
+  font-weight: 400;
+  line-height: 3.5vh;
+}
+body main .Destaques .texto::before {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 93%;
+  background-color: #EFF4F8;
+  border-radius: 1.5vw;
+}
+body main .Destaques .texto svg {
+  position: absolute;
+  border: solid 3px #FFFFFF;
+  background-color: #EFF4F8;
+  top: -7.5%;
+  left: 48%;
+  width: 2.5vw;
+  height: 2.5vw;
+  border-radius: 50%;
+  padding: 0.25vw;
 }
 body main .Diferencial {
   width: 100%;
   height: 75vh;
   position: relative;
   border: solid rgb(0, 255, 42) 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main .Diferencial .DifBlock {
+  width: 50%;
+  height: 100%;
+  border: solid red 1px;
+}
+body main .Diferencial .VideoBlock {
+  width: 50%;
+  height: 100%;
+  border: solid blue 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 0 5vw;
+}
+body main .Diferencial .VideoBlock iframe {
+  width: 100%;
+  height: 35vh;
+  border-radius: 1vw;
+  background-color: #004CDC;
+}
+body main .Diferencial .VideoBlock a {
+  background-color: #00B3E5;
+  color: #FFFFFF;
+  font-weight: 600;
+  margin-top: 5vh;
+  width: 100%;
+  padding: 1.5vh 0;
+  border-radius: 0.5vw;
+  text-align: center;
+  font-size: 1vw;
 }
 body main .Numeros_Clientes {
   width: 100%;
