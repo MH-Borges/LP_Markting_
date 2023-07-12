@@ -194,7 +194,7 @@ body main .Banner .texto svg {
   width: 2.5vw;
   height: 2.5vw;
   border-radius: 50%;
-  padding: 0.25vw;
+  padding: 0.5vw;
 }
 body main .Destaques {
   padding: 5vh 0 3vh;
@@ -239,7 +239,7 @@ body main .Destaques .CardsBlock .card:nth-child(4), body main .Destaques .Cards
   margin-top: -7vh;
 }
 body main .Destaques .CardsBlock .card:nth-child(4) {
-  margin-right: -11vw;
+  margin-right: -11.5vw;
 }
 body main .Destaques .CardsBlock .card h4 {
   height: 100%;
@@ -292,13 +292,12 @@ body main .Destaques .texto svg {
   width: 2.5vw;
   height: 2.5vw;
   border-radius: 50%;
-  padding: 0.25vw;
+  padding: 0.5vw;
 }
 body main .Diferencial {
   width: 100%;
   height: 75vh;
   position: relative;
-  border: solid rgb(0, 255, 42) 1px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -306,12 +305,53 @@ body main .Diferencial {
 body main .Diferencial .DifBlock {
   width: 50%;
   height: 100%;
-  border: solid red 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body main .Diferencial .DifBlock h2 {
+  width: 100%;
+  margin-top: -5.5vh;
+  color: #153AD1;
+  font-weight: 900;
+  font-size: 2vw;
+  padding: 1vh 8vw 1vh 0;
+}
+body main .Diferencial .DifBlock h3 {
+  width: 100%;
+  color: #1A2E3C;
+  font-weight: 400;
+  font-size: 0.9vw;
+  padding: 0.5vh 0;
+  line-height: 2.25vh;
+}
+body main .Diferencial .DifBlock .CardsBlock {
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+body main .Diferencial .DifBlock .CardsBlock .card {
+  border-radius: 0.75vw;
+  background-color: #EFF4F8;
+  width: 48%;
+  height: 9vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.1vw;
+  font-weight: 400;
+  padding: 0 2vw;
+}
+body main .Diferencial .DifBlock .CardsBlock .card:nth-child(3), body main .Diferencial .DifBlock .CardsBlock .card:nth-child(4) {
+  margin: -5vh 0;
 }
 body main .Diferencial .VideoBlock {
   width: 50%;
   height: 100%;
-  border: solid blue 1px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -320,7 +360,7 @@ body main .Diferencial .VideoBlock {
 }
 body main .Diferencial .VideoBlock iframe {
   width: 100%;
-  height: 35vh;
+  height: 31vh;
   border-radius: 1vw;
   background-color: #004CDC;
 }
@@ -340,6 +380,23 @@ body main .Numeros_Clientes {
   height: 100vh;
   position: relative;
   border: solid blue 1px;
+  padding: 7.5vh 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+body main .Numeros_Clientes::before {
+  background-color: #EFF4F8;
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 100%;
+  z-index: -1;
+  left: -22%;
+  top: 0;
+}
+body main .Numeros_Clientes h2 {
+  border: solid red 1px;
+  width: 100%;
 }
 body main .SEO {
   width: 100%;

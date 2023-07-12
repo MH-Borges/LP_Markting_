@@ -195,7 +195,7 @@ body {
                    width: 2.5vw;
                    height: 2.5vw;
                    border-radius: 50%;
-                   padding: 0.25vw;
+                   padding: 0.5vw;
                 }
             }
         }
@@ -239,7 +239,7 @@ body {
                         margin-top: -7vh;
                     }
                     &:nth-child(4){
-                        margin-right: -11vw;
+                        margin-right: -11.5vw;
                     }
                     h4{
                         height: 100%;
@@ -293,7 +293,7 @@ body {
                    width: 2.5vw;
                    height: 2.5vw;
                    border-radius: 50%;
-                   padding: 0.25vw;
+                   padding: 0.5vw;
                 }
             }
         }
@@ -301,19 +301,59 @@ body {
             width: 100%;
             height: 75vh;
             position: relative; 
-            border: solid rgb(0, 255, 42) 1px;
             display: flex;
             align-items: center;
             justify-content: center;
             .DifBlock{
                 width: 50%;
                 height: 100%;
-                border: solid red 1px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h2{
+                    width: 100%;
+                    margin-top: -5.5vh;
+                    color: $AzulTexto;
+                    font-weight: 900;
+                    font-size: 2vw;
+                    padding: 1vh 8vw 1vh 0;
+                }
+                h3{
+                    width: 100%;
+                    color: $Preto;
+                    font-weight: 400;
+                    font-size: 0.9vw;
+                    padding: 0.5vh 0;
+                    line-height: 2.25vh;
+                }
+                .CardsBlock{
+                    width: 100%;                
+                    height: 40vh;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    justify-content: space-between;
+                    .card{
+                        border-radius: 0.75vw;
+                        background-color: $Cinza;
+                        width: 48%;
+                        height: 9vh;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        font-size: 1.1vw;
+                        font-weight: 400;
+                        padding: 0 2vw;
+                        &:nth-child(3), &:nth-child(4){
+                            margin: -5vh 0;
+                        }
+                    }
+                }
             }
             .VideoBlock{
                 width: 50%;
                 height: 100%;
-                border: solid blue 1px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -321,7 +361,7 @@ body {
                 padding:  0 0 0 5vw;
                 iframe{
                     width: 100%;
-                    height: 35vh;
+                    height: 31vh;
                     border-radius: 1vw;
                     background-color: $AzulEscuro;
                 }
@@ -343,6 +383,23 @@ body {
             height: 100vh;
             position: relative;
             border: solid blue 1px;
+            padding: 7.5vh 0;
+            display: flex;
+            flex-wrap: wrap;
+            &::before{
+                background-color: $Cinza;
+                content: '';
+                position: absolute;
+                width: 150%;
+                height: 100%;
+                z-index: -1;
+                left: -22%;
+                top: 0;
+            }
+            h2{
+                border: solid red 1px;
+                width: 100%;
+            }
         }
         .SEO{
             width: 100%;
