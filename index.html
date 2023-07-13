@@ -269,55 +269,49 @@
             <div class="infos">
                 <h2>Dashboards descomplicados</h2>
                 <h3>Na SEO marketing você conta com relatórios completos como nunca antes visto</h3>
-                <div class="cards">
+                <div class="card">
                     <img src="assets/Icon_Btns.svg" onload="SVGInject(this)">
                     <p>Em tempo real</p>
                 </div>
-                <div class="cards">
+                <div class="card">
                     <img src="assets/Icon_Btns.svg" onload="SVGInject(this)">
                     <p>Integrados</p>
                 </div>
-                <div class="cards">
+                <div class="card">
                     <img src="assets/Icon_Btns.svg" onload="SVGInject(this)">
                     <p>Personalizados</p>
                 </div>
-                <a href="">Quero um dashboard descomplicado</a>
+                <a href="#Formulario">Quero um dashboard descomplicado</a>
             </div>
         </section>
 
-        <section id="Formulario" class="Form_contato">
+        <section id="Formulario" class="contato">
             <div class="form">
                 <img src="assets/Form.webp" alt="">
-                <h2>Vamos juntos pensar digital</h2>
-                <form class="labels" method="POST">
-                    <div class="BlockBox">
-                        <input type="text" name="nome" id="nome" required>
-                        <span>Nome completo:</span>
-                    </div>
-                    <div class="BlockBox">
-                        <input type="text" name="telefone" id="telefone" required>
-                        <span>Telefone:</span>
-                    </div>
-                    <div class="BlockBox">
-                        <input type="text" name="email" id="email" required>
-                        <span>E-mail:</span>
-                    </div>
-                    <div class="BlockBox">
-                        <input type="text" name="assunto" id="assunto" required>
-                        <span>Assunto:</span>
-                    </div>
-                    <div class="BlockBox">
-                        <textarea type="text" name="mensagem" id="mensagem" required></textarea>
-                        <span>Como podemos te ajudar?</span>
-                    </div>
-                    <input id="Enviar_Contato" type="button" value="Enviar mensagem"></input>
-                    <div class="col-md-12 text-right" id="Alertmsg"></div> 
-                </form>
+                <div class="formBlock">
+                    <h2>Vamos juntos pensar digital</h2>
+                    <form class="labels" method="POST">
+                        <input type="text" name="nome" id="nome" placeholder="Nome" required>
+                        <div class="select">
+                            <select name="area" id="area">
+                                <option value="">Área:</option>
+                                <option value="-">??</option>
+                                <option value="--">???</option>
+                                <option value="---">?/?/?</option>
+                            </select>
+                            <img src="assets/seta.svg" onload="SVGInject(this)">
+                        </div>
+                        <input type="text" name="telefone" id="telefone" placeholder="Telefone">
+                        <input type="text" name="email" id="email" placeholder="E-mail" required>
+                        <input id="Enviar_Contato" type="button" value="Quero uma proposta personalizada"></input>
+                        <div id="Alertmsg"></div>
+                    </form>
+                </div>
             </div>
-            <div class="logo">
+            <div class="logoContato">
                 <img src="assets/Logo.svg" onload="SVGInject(this)">
             </div>
-            <div class="Contato">
+            <div class="ContatoRedes">
                 <a href="" class="whats">
                     <img src="assets/Whats.svg" onload="SVGInject(this)">
                     <p>(11) 9 7706-0555</p>
@@ -344,18 +338,15 @@
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2023 SEOMarketing - Todos os Direitos Reservados.</p>
-    </footer>
+    <footer> &copy; 2023 SEOMarketing - Todos os Direitos Reservados. </footer>
 
     <script>
-
         $(window).scroll(function () {
             var tela = window.innerHeight;
             var foco = document.querySelector('.Numeros_Clientes').getBoundingClientRect().top;
             if(foco < tela/2){
                 const counters = document.querySelectorAll('.value');
-                const speed = 200;
+                const speed = 300;
 
                 counters.forEach(counter => {
                     const animate = () => {
@@ -385,35 +376,11 @@
             }
             else{
                 const counters = document.querySelectorAll('.value');
-                const speed = 200;
-
-                counters.forEach(counter => {
-                    const animate = () => {
-                        const value = ' 000';
-                        const data = +counter.innerText;
-                        
-                        const time = 999 / speed;
-                        if(data < value) {
-                            counter.innerText = Math.ceil(data + time);
-                            setTimeout(animate, 1);
-                        }
-                        else{
-                            counter.innerText = value;
-                        }
-                    }
-                
-                    animate();
-                });
+                counters.forEach(counter => { counter.innerText = '000'; });
             }
         });
 
-    </script>
-    
-    <!-- JS
-
         $(document).ready(function () {
-            $('#telefone').mask('(00) 00000 - 0000');
-
             $('#Enviar_Contato').click(function (e) {
                 event.preventDefault();
                 $('#Alertmsg').removeClass('text-danger');
@@ -458,50 +425,7 @@
                 })
             });
         });
-
-     -->
-
-     <!-- PHP 
-
-        <?php
-
-            $nome = addslashes($_POST['nome']);
-            $email = filter_var(addslashes($_POST['email']), FILTER_SANITIZE_EMAIL);
-            $telefone = addslashes($_POST['telefone']);
-            $assunto = addslashes($_POST['assunto']);
-            $mensagem = addslashes($_POST['mensagem']);
-
-            if($nome == ""){
-                echo 'Preencha o Campo de Nome';
-                exit();
-            }
-            if($email == ""){
-                echo 'Preencha o Campo do Email';
-                exit();
-            }
-            if($mensagem == ""){    
-                echo 'Preencha o Campo de Mensagem';
-                exit();
-            }
-
-            $to = "universofarol@outlook.com";
-            $subject = "Contato cliente ($nome) - $assunto";
-            $body = utf8_decode(
-                'Nome: ' .$nome. "\r\n"."\r\n".
-                'Email: ' .$email. "\r\n"."\r\n".
-                'Telefone: '.$telefone. "\r\n"."\r\n".
-                'Mensagem:'. "\r\n"."\r\n". $mensagem
-            );
-
-            $header = 'From:contato@universofarol.com.br'."\r\n".
-                    "Reply-To:".$email;
-
-            if(mail($to,$subject,$body,$header)){
-                echo ("Email enviado com sucesso!");
-            }
-
-        ?>
-
-      -->
+    </script>
+    
 </body>
 </html>

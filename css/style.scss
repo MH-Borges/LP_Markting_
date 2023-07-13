@@ -10,11 +10,9 @@ $Main-font:'Montserrat', sans-serif;
     list-style: none;
     text-decoration: none !important;
 }
-
 html{
     scroll-behavior:smooth;
 }
-
 ::-webkit-scrollbar {
     width: 1vw;
     background: $Cinza;
@@ -31,6 +29,16 @@ body {
     font-family: $Main-font;
     background-color: $Branco;
     overflow-x: hidden;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        bottom: 1.8%;
+        width: 100%;
+        height: 62vh;
+        background-color: $AzulEscuro;
+        z-index: -1;
+    }
     header {
         top: 0;
         position: fixed;
@@ -79,7 +87,6 @@ body {
             }
         }
     }
-  
     main{
         margin: auto;
         width: 70%;
@@ -87,6 +94,7 @@ body {
         display: flex;
         flex-direction: column;
         position: relative;
+        
         .Banner{
             margin-top: 12vh;
             width: 100%;
@@ -208,7 +216,7 @@ body {
                    width: 2.5vw;
                    height: 2.5vw;
                    border-radius: 50%;
-                   padding: 0.5vw;
+                   padding: 0.4vw;
                 }
             }
         }
@@ -306,7 +314,7 @@ body {
                    width: 2.5vw;
                    height: 2.5vw;
                    border-radius: 50%;
-                   padding: 0.5vw;
+                   padding: 0.4vw;
                 }
             }
         }
@@ -513,7 +521,7 @@ body {
                         display: flex;
                         align-items: start;
                         justify-content: center;
-                        font-size: 0.68vw;
+                        font-size: 0.65vw;
                         font-weight: 400;
                         line-height: 1.6vh;
                     }
@@ -526,7 +534,6 @@ body {
                     text-align: center;
                 }
             }
-            
         }
         .SEO{
             width: 100%;
@@ -608,9 +615,12 @@ body {
                     display: flex;
                     align-items: center;
                     padding: 15vh 0 15vh 7vw;
+                    position: relative;
                     img{
                         width: auto;
                         height: 100%;
+                        padding: 15vh 0 15vh 2vw;
+                        position: absolute;
                     }
                 }
             }
@@ -695,119 +705,284 @@ body {
             }
         }
         .Dashboards{
-            z-index: 999;
             width: 100%;
             height: 100vh;
             position: relative;
-            border: solid rgb(255, 0, 242) 1px;
-        }
-        .Form_contato{
-            width: 100%;
-            height: 100vh;
-            position: relative; 
-            border: solid rgb(51, 255, 0) 1px;
-            .form{
-                width: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .Imagem{
+                width: 60%;
                 height: 100%;
-                padding: 1vw;
+                position: relative;
                 display: flex;
                 align-items: center;
-                .labels{
+                img{
+                    position: absolute;
+                    width: auto;
+                    height: 100%;
+                    &:nth-child(1){
+                        right: 53%;
+                        height:70%;
+                    }
+                    &:nth-child(2){
+                        width: 100%;
+                        height: auto;
+                        right: 5%;
+                    }
+                }
+            }
+            .infos{
+                width: 40%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding:0 4vw 0 1vw;
+                h2{
                     width: 100%;
+                    height: 10vh;
+                    font-size: 2vw;
+                    color: $AzulTexto;
+                    font-weight: 900;
+                    padding-right: 5vw;
                     display: flex;
-                    flex-wrap: wrap;
-                    padding: 1vw;
-                    padding-bottom: 10vh;
-                    position: relative;
-                    justify-content: flex-end;
-                    .BlockBox{
-                        width: 80%;
-                        height: 7vh;
-                        position: relative;
-                        margin: 3vh 0;
-                        border-radius: 1vw;
+                    align-items: center;
+                }
+                h3{
+                    width: 100%;
+                    height: 7vh;
+                    display: flex;
+                    align-items: center;
+                    color: $Preto;
+                    font-weight: 400;
+                    font-size: 1vw;
+                    line-height: 2.25vh;
+                    margin-bottom: 1vh;
+                }
+                .card{
+                    background-color: $Cinza;
+                    border-radius: 0.75vw;
+                    width: 100%;
+                    height: 8vh;
+                    display: flex;
+                    margin: 1vh 0;
+                    svg, img{
+                        padding: 2.25vh 0;
+                        width: 30%;
+                        height: 100%;
+                    }
+                    p{
+                        width: 70%;
+                        height: 100%;
                         display: flex;
-                        &:nth-child(5){
-                            height: 12vh;
-                        }
-                        input, textarea{
-                            width: 95% !important;
-                            margin-left: 2.5%;
-                            font-size: 1vw;
-                            color: $Laranja;
-                            border: none;
+                        align-items: center;
+                        justify-content: left;
+                        font-weight: 400;
+                        font-size: 1vw;
+                        color: $Preto;
+                    }
+                }
+                a{
+                    background-color: $AzulClaro;
+                    color: $Branco;
+                    font-weight: 600;
+                    margin-top: 4vh;
+                    width: 100%;
+                    padding: 1.5vh 0;
+                    border-radius: 0.5vw;
+                    text-align: center;
+                    font-size: 1vw;
+                }
+            }
+        }
+        .contato{
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .form{
+                width: 100%;
+                height: 70vh;
+                display: flex;
+                img{
+                    width: 40%;
+                    height: 100%;
+                }
+                .formBlock{
+                    width: 60%;
+                    height: 100%;
+                    padding: 8vh 5vw;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: relative;
+                    margin-left: auto;
+                    background: $Branco;
+                    border-bottom-right-radius: 1vw;
+                    h2{
+                        width: 100%;
+                        height: 7vh;
+                        text-align: center;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: $AzulTexto;
+                        font-weight: 900;
+                        font-size: 1.75vw;
+                        margin: -4vh 0 1vh;
+                    }
+                    .labels{
+                        width: 100%;
+                        height: 47vh;
+                        display: flex;
+                        flex-wrap: wrap;
+                        padding: 3vh 0;
+                        position: relative;
+                        input{
+                            width: 100%;
+                            height: 7.5vh;
+                            color: $Preto;
                             background: none;
                             outline: none;
-                            padding: 2vh 0.5vw;
-                            font-weight: 800;
+                            border: 1px solid $Preto;
+                            font-weight: 500;
+                            font-size: 1vw;
+                            padding-left: 1.5vw;
+                            border-radius: 0.75vw;
+                            &::-ms-input-placeholder{
+                                color: $Preto;
+                                font-size: 1vw;
+                            }
                         }
-                        textarea{
-                            min-height: 11vh !important;
-                            resize: none;
+                        .select {
+                            width: 100%;
+                            height: 7.5vh;
+                            display: flex;
+                            align-items: center;
+                            position: relative;
+                            border: 1px solid $Preto;
+                            border-radius: 0.75vw;
+                            padding-left: 1.5vw;
+                            font-size: 1.25vw;
+                            cursor: pointer;
+    
+                            select{
+                                width: 100%;
+                                height: 100%;
+                                font-size: 1vw;
+                                background: none;
+                                outline: none;
+                                appearance: none;
+                                border: none;
+                                margin: 0;
+                                z-index: 1;
+                                color: $Preto;
+                            }
+    
+                            svg{
+                                position: absolute;
+                                right: 5%;
+                                path{
+                                    stroke: $AzulClaro;
+                                }
+                            }
+                              
+                            
                         }
-                        span{
-                            font-weight: 700;
+                        #Enviar_Contato{
+                            width: 100%;
+                            height: 6vh;
+                            bottom: -7%;
                             position: absolute;
-                            left: 1vw;
-                            top: 1.1vw;
-                            font-size: 1.1vw;
-                            color: $AzulEscuro;
-                            transition: 0.5s;
-                            pointer-events: none;
+                            font-size: 1vw;
+                            background: $AzulClaro;
+                            color: $Branco;
+                            border-radius: 0.5vw;
+                            border: none;
+                            font-weight: 600;
                         }
-                        &:nth-child(1), &:nth-child(2){
-                            width: 38%;
-                        }
-                        &:nth-child(2){
-                            margin-left: 1.3vw;
+                        #Alertmsg{
+                            position: absolute;
+                            bottom: -20%;
+                            right: -10%;
+                            font-size: 1vw;
                         }
                     }
-                    .BlockBox input:focus ~ span, textarea:focus ~ span, input:valid ~ span, textarea:valid ~ span{
-                        transform:translate(-1vw, -5.5vh);
-                        font-size: 1.25vw;
-                        color:$AzulClaro;
+                }
+            }
+           
+            .logoContato, .ContatoRedes, .Redes{
+                height: 30vh;
+                width: 33%;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: center;
+            }
+            .logoContato{
+                svg{
+                    width: 60%;
+                }
+            }
+            .ContatoRedes{
+                a{
+                    width: 100%;
+                    height: 7vh;
+                    display: flex;
+                    align-items: center;
+                    color: $Branco;
+                    font-weight: 400;
+                    font-size: 1vw;
+                    svg{
+                        width: 15%;
                     }
-                    #Enviar_Contato{
-                        position: absolute;
-                        font-size: 1vw;
-                        background: $AzulEscuro;
-                        color: $Branco;
-                        padding: 1vh 1vw;
-                        border-radius: 1vw;
-                        letter-spacing: 0.05vw;
-                        bottom: 0;
-                        right: 0;
-                        border: none;
-                        font-weight: 700;
+                    span{
+                        width: 85%;
+                        text-align: left;
+                    }
+                    &:nth-child(2){
+                        margin-top: -14vh;
+                    }
+                }
+            }
+            .Redes{
+                a{
+                    width: 15%;
+                    height: 6vh;
+                    margin: 0 0.5vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    span{
+                        display: none;
+                        opacity: 0;
+                    }
+                    &:hover{
+                        svg{
+                            path{
+                                stroke: $AzulClaro;
+                            }
+                        }
                     }
                 }
             }
         }
     }
-  
     footer{
         background-color: $AzulEscuro;
         width: 100%;
-        height: 11vh;
+        height: 15vh;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        padding: 0.5vh 0 1.5vh;
-        a{
-            width: auto;
-            height: 100%;
-            img{
-                height: 90%;
-                width: auto;
-            }
-        }
-        p{
-            font-size: 0.75vw;
-            padding: 0.5vh 0;
-        }
-      
+        font-size: 0.9vw;
+        font-weight: 400;
+        color: $Branco;
+        border-top: 1px solid $AzulClaro;
     }
-  
 }
-  
