@@ -1,4 +1,6 @@
 @import 'colors_fonts';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
 
 $Main-font:'Montserrat', sans-serif;
 
@@ -8,10 +10,10 @@ $Main-font:'Montserrat', sans-serif;
     box-sizing: border-box !important;
     list-style: none;
     text-decoration: none !important;
+    font-display: swap;
 }
 html{
     scroll-behavior:smooth;
-    font-display: swap;
 }
 ::-webkit-scrollbar {
     width: 0.75vw;
