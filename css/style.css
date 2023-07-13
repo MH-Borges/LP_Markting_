@@ -8,6 +8,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-display: swap;
 }
 
 ::-webkit-scrollbar {
@@ -280,7 +281,7 @@ body main .Destaques .CardsBlock .card:nth-child(4), body main .Destaques .Cards
 body main .Destaques .CardsBlock .card:nth-child(4) {
   margin-right: -11.5vw;
 }
-body main .Destaques .CardsBlock .card h4 {
+body main .Destaques .CardsBlock .card span {
   height: 100%;
   width: 25%;
   display: flex;
@@ -523,7 +524,7 @@ body main .Numeros_Clientes .CardsBlock .card .img {
   align-items: center;
   justify-content: center;
 }
-body main .Numeros_Clientes .CardsBlock .card h4 {
+body main .Numeros_Clientes .CardsBlock .card h3 {
   height: 15%;
   width: 100%;
   display: flex;

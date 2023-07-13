@@ -11,6 +11,7 @@ $Main-font:'Montserrat', sans-serif;
 }
 html{
     scroll-behavior:smooth;
+    font-display: swap;
 }
 ::-webkit-scrollbar {
     width: 0.75vw;
@@ -268,7 +269,7 @@ body {
                     &:nth-child(4){
                         margin-right: -11.5vw;
                     }
-                    h4{
+                    span{
                         height: 100%;
                         width: 25%;
                         display: flex;
@@ -511,7 +512,7 @@ body {
                         align-items: center;
                         justify-content: center;
                     }
-                    h4{
+                    h3{
                         height: 15%;
                         width: 100%;
                         display: flex;
